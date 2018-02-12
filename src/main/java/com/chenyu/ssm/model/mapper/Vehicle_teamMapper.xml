@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chenyu.ssm.dao.Vehicle_teamDao">
+
+    <sql id="Vehicle_teamColumn">
+       vt_id,vt_state,vt_code,vt_name,vt_contacter,vt_contacter_info,vt_description,vt_operate_time
+    </sql>
+
+    <!--获取车队列表-->
+    <select id="getAllVehicleTeam"  resultType="com.chenyu.ssm.model.baseParam.VehicleTeamParam">
+        SELECT vt_id,vt_state,vt_code,vt_name,vt_contacter,vt_contacter_info,vt_description,vt_operate_time,v.user_id,u.user_real_name
+        FROM vehicle_team AS v
+        LEFT JOIN _user as u on v.user_id = u.user_id
+    </select>
+
+    <!--添加车队-->
+    <insert id="addVehicle_team" parameterType="com.chenyu.ssm.model.Vehicle_team">
+        INSERT INTO vehicle_team (vt_state,vt_code,vt_name,vt_contacter,vt_contacter_info,vt_description,user_id,vt_operate_time,company_id)
+        VALUES (#{vt_state},#{vt_code},#{vt_name},#{vt_contacter},#{vt_contacter_info},#{vt_description},#{user_id},#{vt_operate_time},#{company_id})
+    </insert>
+
+    <!--修改车队-->
+    <update id="updateVehicle_team" parameterType="com.chenyu.ssm.model.Vehicle_team">
+      UPDATE  vehicle_team SET
+      vt_state = #{vt_state},
+      vt_code = #{vt_code},
+      vt_name = #{vt_name},
+      vt_contacter = #{vt_contacter},
+      vt_contacter_info = #{vt_contacter_info},
+      vt_description = #{vt_description},
+      user_id = #{user_id},
+      vt_operate_time= #{vt_operate_time},
+      company_id= #{company_id}
+      WHERE vt_id = #{vt_id}
+    </update>
+
+    <!--删除车队-->
+    <delete id="deleteVehicle_team" parameterType="int">
+      UPDATE vehicle_team SET vt_state = '已删除' WHERE vt_id = #{vt_id}
+    </delete>
+
+    <!--根据id获取协议-->
+    <select id="getAllVehicleTeamAgreement" parameterType="int" resultType="com.chenyu.ssm.model.baseParam.VehicleTeamAgreementParam">
+      SELECT vta_id,vta_state,vta.vt_id,vta_name,vta_start_time,vta_end_time,vta_detail,vta_mark,vta.user_id,vta_operate_time,vt.vt_name,u.user_real_name
+        FROM vehicle_team_agreement AS vta
+        LEFT JOIN vehicle_team AS vt ON vt.vt_id = vta.vt_id
+        LEFT JOIN _user AS u ON vta.user_id = u.user_id
+        WHERE vt.vt_id = #{vt.vt_id}
+    </select>
+
+    <!--查询总数-->
+    <select id="findVehicleTeamCountBykeyWord" parameterType="String" resultType="int">
+        SELECT COUNT(*) FROM vehicle_team
+        WHERE 1=1
+        <if test="keyWord!=null and keyWord!=''and keyWord!='null'">AND vt_name LIKE CONCAT('%',${_parameter},'%')</if>
+    </select>
+
+    <!--模糊分页查询-->
+    <select id="findVehicleTeamByLimit" parameterType="String"  resultType="com.chenyu.ssm.model.baseParam.VehicleTeamParam">
+        SELECT vt_id,vt_state,vt_code,vt_name,vt_contacter,vt_contacter_info,vt_description,vt_operate_time,v.user_id,u.user_real_name
+        FROM vehicle_team AS v
+        LEFT JOIN _user as u on v.user_id = u.user_id
+        WHERE 1=1
+        <if test="keyWord!=null and keyWord!='' and keyWord!='null'">AND vt_name LIKE CONCAT('%',#{keyWord},'%')</if>
+        ORDER BY vt_id DESC
+        limit #{start},#{number}
+    </select>
+
+    <!--添加协议-->
+    <insert id="addVehicle_team_agreement" parameterType="com.chenyu.ssm.model.Vehicle_team_agreement">
+        INSERT INTO vehicle_team_agreement(vta_state,vt_id,vta_name,vta_start_time,vta_end_time,vta_detail,vta_mark,user_id,vta_operate_time)
+        VALUES (#{vta_state},#{vt_id},#{vta_name},#{vta_start_time},#{vta_end_time},#{vta_detail},#{vta_mark},#{user_id},#{vta_operate_time})
+    </insert>
+
+    <!--修改协议-->
+    <update id="updateVehicle_team_agreement" parameterType="com.chenyu.ssm.model.Vehicle_team_agreement">
+        UPDATE  vehicle_team_agreement SET
+      vta_state = #{vta_state},
+      vt_id = #{vt_id},
+      vta_name = #{vta_name},
+      vta_start_time = #{vta_start_time},
+      vta_end_time = #{vta_end_time},
+      vta_detail = #{vta_detail},
+      vta_mark = #{vta_mark},
+      user_id= #{user_id},
+      vta_operate_time= #{vta_operate_time}
+      WHERE vta_id = #{vta_id}
+    </update>
+
+    <!--删除协议-->
+    <delete id="deleteVehicle_team_agreement" parameterType="int">
+        UPDATE vehicle_team_agreement SET vta_state = '已删除' WHERE vta_id = #{vta_id}
+    </delete>
+
+    <!--根据id获取车辆-->
+    <select id="getAllVehicle" parameterType="int" resultType="com.chenyu.ssm.model.Vehicle">
+        SELECT vehicle_name,vehicle_type,v.vt_id,vehicle_state,vehicle_market_price,vehicle_peer_price,vehicle_cost_price,vehicle_count
+        FROM vehicle AS v
+        LEFT JOIN vehicle_team AS vt ON vt.vt_id = v.vt_id
+        WHERE vt.vt_id = #{vt_id}
+    </select>
+
+    <!--添加车辆-->
+    <select id="addVehicle" parameterType="com.chenyu.ssm.model.Vehicle">
+       INSERT INTO vehicle(vehicle_name,vehicle_type,vt_id,vehicle_state,vehicle_market_price,vehicle_peer_price,vehicle_cost_price,vehicle_count)
+        VALUES (#{vehicle_name},#{vehicle_type},#{vt_id},#{vehicle_state},#{vehicle_market_price},#{vehicle_peer_price},#{vehicle_cost_price},#{vehicle_count})
+    </select>
+
+    <!--修改车辆-->
+    <update id="updateVehicle" parameterType="com.chenyu.ssm.model.Vehicle">
+      UPDATE  vehicle SET
+      vehicle_name = #{vehicle_name},
+      vehicle_type = #{vehicle_type},
+      vt_id = #{vt_id},
+      vehicle_state = #{vehicle_state},
+      vehicle_market_price = #{vehicle_market_price},
+      vehicle_peer_price = #{vehicle_peer_price},
+      vehicle_cost_price = #{vehicle_cost_price},
+      vehicle_count= #{vehicle_count}
+      WHERE vehicle_id = #{vehicle_id}
+    </update>
+
+    <!--删除车辆-->
+    <delete id="deleteVehicle" parameterType="int">
+        UPDATE vehicle SET vehicle_state = '已删除' WHERE vehicle_id = #{vehicle_id}
+    </delete>
+</mapper>

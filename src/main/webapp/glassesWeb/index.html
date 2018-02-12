@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<!--头部-->
+<!--顶部菜单-->
+<div class="top bg-F0F0F0 font-size-12">
+
+    <div class="width-1190 margin-auto height-30">
+        <div class="top_left ">
+            <ul class="top_left_list height-30 line-height-30">
+                <li>
+                    <a class="hover-7a97c5 cursor">联系我们</a>
+                </li>
+                <li class="border-right-solid height-12 margin-top-10"></li>
+                <li>
+                    <a class="hover-7a97c5 cursor">关于我们</a>
+                </li>
+                <li class="border-right-solid height-12 margin-top-10"></li>
+                <li>
+                    <a class="hover-7a97c5 cursor">联系我们</a>
+                </li>
+                <li class="border-right-solid height-12 margin-top-10"></li>
+                <li>
+                    <a class="hover-7a97c5 cursor">联系我们</a>
+                </li>
+                <li>
+                    <a class="hover-7a97c5 cursor">联系我们</a>
+                </li>
+            </ul>
+        </div>
+        <div class="top_right line-height-30">
+            <span class="display-block float-left margin-right-10">你好，欢迎光临本网站！</span>
+            <a href="login.html"><span class="display-block margin-right-10 float-left hover-7a97c5 cursor">登录</span></a>
+            <a href="register.html"><span class="display-block float-left hover-7a97c5 cursor">注册</span></a>
+        </div>
+    </div>
+</div>
+<div class="width-1190 margin-auto height-120 position-relative">
+    <div class="logo float-left position-absolute">
+        <img src="img/logo.png" width="120">
+    </div>
+    <div class="search position-absolute">
+        <div class="search-input">
+            <input type="text"   class="sea_input"  >
+             <span class="search_submit cursor">搜索</span>
+        </div>
+    </div>
+</div>
+<!--导航-->
+<div class="menu margin-top-10">
+    <div class="width-1190 height-40 margin-auto ">
+        <div class="nav-left cursor position-relative ">
+            <span class="display-block height-40 line-height-40 font-size-14 float-left">全部商品分类</span>
+            <i class="fa fa-list-ul margin-left-10 float-left" id="all-p" style="font-size: 14px;margin-top: 13px"></i>
+            <ul class="all position-absolute bg-theme " >
+                <li class="hover-list-item position-relative" >
+                    <a class="display-block float-left width-190 height-50 " href="index.html">首页</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+<!--                    <div class="children-list bg-ffffff color-2D6BC3">
+                        <ul class="padding-left-50">
+                            <li>
+                                <span class="display-inline-block">品牌:</span>
+                                <span class="display-inline-block">Han</span>
+                            </li>
+                        </ul>
+                    </div>-->
+                </li>
+                <li class="hover-list-item ">
+                    <a class="display-block float-left width-190 height-50">彩瞳</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+                <li class="hover-list-item color-ffffff" >
+                    <a class="display-block float-left width-190 height-50 " href="productlist.html">隐形眼镜</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+                <li class="hover-list-item ">
+                    <a class="display-block float-left width-190 height-50">护理用品</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+                <li class="hover-list-item ">
+                    <a class="display-block float-left width-190 height-50">框架眼镜</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+                <li class="hover-list-item ">
+                    <a class="display-block float-left width-190 height-50">美妆个护</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+                <li class="hover-list-item ">
+                    <a class="display-block float-left width-190 height-50">眼镜知识</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+                <li class="hover-list-item ">
+                    <a class="display-block float-left width-190 height-50">积分商城</a>
+                    <i class="fa fa-chevron-right float-left margin-top-20 position-absolute " style="right: 40px"></i>
+                    <div class="list-item-line"></div>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav-right">
+            <li><a class="color-ffffff" href="index.html">首页</a></li>
+            <li>彩瞳</li>
+            <li><a class="color-ffffff" href="productlist.html">隐形眼镜</a></li>
+            <li>护理用品</li>
+            <li>框架眼镜</li>
+            <li>美妆个护</li>
+            <li>眼镜知识</li>
+            <li>积分商城</li>
+        </ul>
+        <div class="clear-both"></div>
+    </div>
+</div>
+<!--banner图-->
+<div class="banner height-500" style="margin-top: 0px;background: url('img/timg.jpg') no-repeat">
+</div>
+<!--产品-->
+<div class="width-1190 margin-auto">
+    <!--热门推荐-->
+    <div class="glasses-one">
+        <div class="glasses-one-title">
+            <span class="display-block float-left font-size-20 color-2D6BC3 font-weight-bold">推荐产品</span>
+            <span class="display-block float-right font-size-20 color-2D6BC3 cursor">更多》</span>
+            <div class="clear-both"></div>
+        </div>
+        <div class="glasses-one-content margin-top-10 ">
+            <div class="content-left width-380 float-left" style="margin-right: 5px">
+                <div class="content-left-one width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-left-two width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-left-three width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-center width-380 float-left" style="margin-right: 5px">
+                <div class="content-center-one width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-center-two width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-center-three width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right width-380 float-left ">
+                <div class="content-right-one width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-right-two width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-right-three width-380 wow fadeInUp animated hover text-center cursor hover-shadow">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+    <!--隐形眼镜-->
+    <div class="glasses-two">
+        <div class="glasses-two-title">
+            <span class="display-block float-left font-size-20 color-2D6BC3 font-weight-bold">隐形眼镜</span>
+            <span class="display-block float-right font-size-20 color-2D6BC3 cursor">更多》</span>
+            <div class="clear-both"></div>
+        </div>
+        <div class="glasses-two-content margin-top-10">
+            <div class="content-left width-380 float-left" style="margin-right: 5px">
+                <div class="content-left-one width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-left-two width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-left-three width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-center width-380 float-left" style="margin-right: 5px">
+                <div class="content-center-one width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-center-two width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-center-three width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right width-380 float-left ">
+                <div class="content-right-one width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-right-two width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+                <div class="content-right-three width-380 wow fadeInUp animated hover text-center hover-shadow cursor">
+                    <img src="img/4f_6.jpg">
+                    <div class="pro-info">
+                        <span class="pro-name display-block margin-bottom-10">竹川木野Z1677镜框</span>
+                        <span class="pro-price display-block color-e02f26 margin-bottom-10">￥258.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+    <!--护理用品-->
+    <div class="glasses-three ">
+        <div class="glasses-three-title">
+            <span class="display-block float-left font-size-20 color-2D6BC3 font-weight-bold">众筹项目</span>
+            <span class="display-block float-right font-size-20 color-2D6BC3 cursor">更多》</span>
+            <div class="clear-both"></div>
+        </div>
+        <div class="glasses-three-content margin-top-10 padding-bottom-20">
+            <div class="content-left width-380 float-left" style="margin-right: 5px">
+                <div class="content-left-one width-380 wow fadeInUp animated hover  hover-shadow cursor" onclick="location='Crowdfunding.html'">
+                    <div class="content-img text-center">
+                    <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-left-two width-380 wow fadeInUp animated hover hover-shadow cursor" onclick="location='Crowdfunding.html'">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-left-three width-380 wow fadeInUp animated hover hover-shadow cursor">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-center width-380 float-left" style="margin-right: 5px">
+                <div class="content-center-one width-380 wow fadeInUp animated hover hover-shadow cursor">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-center-two width-380 wow fadeInUp animated hover hover-shadow cursor">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-center-three width-380 wow fadeInUp animated hover hover-shadow cursor">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right width-380 float-left ">
+                <div class="content-right-one width-380 wow fadeInUp animated hover hover-shadow cursor" >
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-right-two width-380 wow fadeInUp animated hover hover-shadow cursor">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-right-three width-380 wow fadeInUp animated hover hover-shadow cursor">
+                    <div class="content-img text-center">
+                        <img src="img/4f_6.jpg">
+                    </div>
+                    <div class="pro-info padding-left-10">
+                        <span class="display-block margin-bottom-10  font-weight-bold">抗疲劳防辐射眼镜</span>
+                        <span class="display-block margin-top-20 margin-bottom-20 font-size-14 " style="color: #7b8793">爱她就从呵护眼睛开始</span>
+                        <div class="height-8 border-radius-4 bg-ebeef1 width-350 ">
+                            <span class="display-block height-8 border-radius-4" style="width:78%;background-color: #39c264"></span>
+                        </div>
+                        <div class="padding-bottom-10 padding-top-10">
+                            <span class="display-block float-left padding-right-30 fore1" style="width: 80px">
+                                <span class="display-block font-size-16 ">78%</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已达</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore2 " style="width: 150px">
+                                <span class="display-block font-size-16 ">￥2201</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">已筹</span>
+                            </span>
+                            <span class="display-block float-left padding-left-10 fore3 " style="width: 80px">
+                                <span class="display-block font-size-16 ">12</span>
+                                <span class="display-block color-a5a5a5 font-size-12 padding-top-5">支持人数</span>
+                            </span>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-both"></div>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+</div>
+<div class="height-30"></div>
+<div class="clear-both"></div>
+<!--底部-->
+<div class="footer">
+    <hr>
+    <div class="width-1190 margin-auto">
+        <div class="footer-menu">
+            <ul class="display-block float-left font-size-14 margin-right-80 text-center">
+                <h4>关于我们</h4>
+                <li>公司简介</li>
+                <li>诚聘英才</li>
+                <li>媒体报道</li>
+            </ul>
+            <ul class="display-block float-left font-size-14 margin-right-80 text-center">
+                <h4>新手指南</h4>
+                <li>会员特权</li>
+                <li>购物流程</li>
+                <li>常见问题</li>
+            </ul>
+            <ul class="display-block float-left font-size-14 margin-right-80 text-center">
+                <h4>配送与支付</h4>
+                <li>发票抬头</li>
+                <li>配送时效</li>
+                <li>支付方式</li>
+            </ul>
+            <ul class="display-block float-left font-size-14 margin-right-80 text-center">
+                <h4>服务保证</h4>
+                <li>三包细则</li>
+                <li>申请退款</li>
+                <li>发票说明</li>
+            </ul>
+            <ul class="display-block float-left font-size-14 margin-right-80 text-center">
+                <h4>帮助指南</h4>
+                <li>找回密码</li>
+                <li>快递查询</li>
+                <li>联系我们</li>
+            </ul>
+            <div class="clear-both"></div>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+    <div class="footer-info bg-242424 " >
+        <div class="width-1190 margin-auto line-height-50">
+            <div class="foot-logo float-left margin-top-10"><img src="img/logo.png" width="100" height="30"/></div>
+            <div class="float-left margin-left-50">
+                <span style="color: #959595">© 2005-2017 XXXX公司-时尚眼镜品牌 版权所有，并保留所有权利。公司地址：XXXXXXXXXXXXXXXXXX</span>
+            </div>
+            <div class="clear-both"></div>
+        </div>
+        <div class="width-1190 margin-auto " style="margin-top: 20px">
+        <div class="links">
+            <span class="display-block float-left font-size-12">友情链接:</span>
+            <ul class="links-list">
+                <li><a class="hover-silver">百度一下</a></li>
+                <li><a class="hover-silver">百度一下</a></li>
+                <li><a class="hover-silver">百度一下</a></li>
+                <li><a class="hover-silver">百度一下</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+</div>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>

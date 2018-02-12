@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+    <!-- 扫描web相关的bean -->
+    <!--<context:component-scan base-package="com.chatRobot.controller"/>-->
+    <context:component-scan base-package="com.chenyu.*.Controller"/>
+
+
+
+    <!-- 静态资源默认servlet配置 -->
+    <mvc:default-servlet-handler/>
+
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+
+
+
+    <!-- 配置jsp 显示ViewResolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean name="applicationSwaggerConfig" class="com.chenyu.ssm.util.ApplicationSwaggerConfig" />
+    <mvc:default-servlet-handler/>
+
+
+
+    <!--<context:component-scan base-package="com.cy.*" />-->
+    <!-- 开启SpringMVC注解模式 -->
+    <!--<mvc:annotation-driven/>-->
+    <context:component-scan base-package="com.chenyu.ssm.server"/>
+
+    <mvc:annotation-driven >
+        <mvc:return-value-handlers>
+            <bean class="com.chenyu.ssm.server.json.spring.JsonReturnHandler"></bean>
+        </mvc:return-value-handlers>
+
+        <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
+        <!-- 消息转换器    @ResponseBody （produces="text/html;charset=UTF-8"）返回数据设置为utf-8-->
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+
+
+    <!--全局异常配置-->
+    <!-- <bean id="exceptionResolver" class="com.platform.base.GlobalExceptionResolver"/>-->
+    <bean id="exceptionResolver" class="com.chenyu.ssm.base.DefaultExceptionHandler"></bean>
+
+
+
+
+</beans>

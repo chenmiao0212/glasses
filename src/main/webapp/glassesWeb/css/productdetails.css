@@ -1,0 +1,135 @@
+.details{
+
+}
+.pic{
+    width: 700px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.pic-list{
+    margin-top: 10px;
+}
+.pic-list ul li{
+    height: 70px;
+    width: 70px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.pic-list ul li:hover{
+    border: 1px  solid #959595;
+}
+.info{
+    width: 450px;
+}
+.pro-name{
+    font-family:黑体, 宋体, Arial, Helvetica, sans-serif;
+    width: inherit;
+    border-bottom: 1px solid #D7D7D7;
+}
+.m-numbox{
+    position: relative;
+    float: left;
+ /*   width: 96px;*/
+    height: 27px;
+    line-height: 27px;
+    font-size: 22px;
+    text-align: center;
+}
+.fl{
+    padding-left: 20px;
+}
+.minus{
+    display: inline-block;
+    background: #dcdcdc;
+    cursor: pointer;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    width: 18px;
+}
+.num{
+    padding: 0;
+    width: 49px;
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    font-weight: 500;
+}
+.plus{
+    display: inline-block;
+    background: #dcdcdc;
+    cursor: pointer;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    width: 18px;
+}
+.pay{
+    background-color: #c40000;
+    line-height: 40px;
+    font-weight: bold;
+}
+.join{
+    background-color: #ffffff;
+    line-height: 40px;
+    font-weight: bold;
+    color:#c40000;
+    border: 2px solid #c40000;
+}
+.Popular{
+    width: 210px;
+    float: left;
+    border: 1px solid #e9e9e9;
+}
+.pro-left-item{
+    border: 1px solid #e9e9e9;
+    border-top: 3px solid #2D6BC3;
+}
+.pro-left-item ul li{
+    padding-top: 10px;
+    border-bottom: 1px solid #e9e9e9;
+    cursor: pointer;
+}
+.pro-con{
+    width: 968px;
+    margin-left: 10px;
+    float: left;
+}
+.item-title{
+    width: 125px;
+    color: #666666;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.item-price{
+
+}
+.pro-con-list{
+    height: 40px;
+    background-color: #f5f5f5;
+}
+.pro-con-list span{
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.sp-active{
+    background-color: #2D6BC3;
+    color: white;
+}
+.content{
+    border: 1px solid #e9e9e9;
+}

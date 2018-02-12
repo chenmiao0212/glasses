@@ -1,0 +1,48 @@
+.cro-pro-name{
+    font-family: 黑体, 宋体, Arial, Helvetica, sans-serif;
+    width: inherit;
+    color: #323232;
+}
+.progress-bar{
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ebeef1;
+    overflow: hidden;
+}
+.stand{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+}
+.share{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    float: right;
+}
+.cro-pro-nav{
+    height: 56px;
+    margin-top: 20px;
+    line-height: 56px;
+    background-color: #E5E8ED;
+}
+.cro-pro-nav span{
+    text-align: center;
+    cursor: pointer;
+}
+.hover-cro:hover{
+    background-color: #ededec;
+}
+.active-cro{
+    border-bottom: 4px solid #2D6BC3;
+    color: #2D6BC3;
+    font-weight: 700;
+}
+.cro-pro-content{
+    float: left
+}
+.cro-pro-right{
+    float: right;
+}
